@@ -1,0 +1,49 @@
+.message {
+  margin: 10px 0;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.message.user {
+  justify-content: flex-end;
+}
+
+.message p {
+  padding: 10px 15px; /* Adjusted padding for better spacing */
+  max-width: 80%; /* Limit width to prevent overly long messages */
+  word-wrap: break-word; /* Ensure long words break correctly */
+  border-radius: 10px;
+  font-size: 14px; /* Base font size for messages */
+}
+
+.message.user p {
+  background-color: #ff5733; /* User message background color */
+  color: white;
+  align-self: flex-end; /* Align user messages to the end */
+}
+
+.message.admin p {
+  background-color: #f1f1f1; /* Admin message background color */
+  color: #333;
+  align-self: flex-start; /* Align admin messages to the start */
+  cursor: pointer;
+  transition: background-color 0.3s; /* Smooth transition on hover */
+}
+
+.message.admin p:hover {
+  background-color: #ddd; /* Hover effect for admin messages */
+}
+
+.option-button {
+  background-color: #4caf50; /* Button background color */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.option-button:hover {
+  background-color: #45a049; /* Darker background color on hover */
+}
