@@ -25,9 +25,9 @@ SECRET_KEY = 'django-insecure-b)@^9vc1-3*u8mnw^!pzwh1&y%4%nsqex+dh!0%)97v)b)9_+%
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['15.207.192.151']
 CORS_ALLOWED_ORIGINS = [
-    'http://localhost:3000',  # Add your frontend URL here
+    'http://localhost:3000', 
 ]
 
 # Optional: Allow credentials (cookies, authorization headers, etc.) to be included in cross-origin requests
