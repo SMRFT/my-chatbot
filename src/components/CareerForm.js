@@ -45,7 +45,7 @@ const CareerForm = ({ onSubmit }) => {
     data.append('resume', formData.resume);
 
     try {
-      await axios.post('http://127.0.0.1:8000/submit/', data, {
+      await axios.post('http://15.207.192.151:8000/submit/', data, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },

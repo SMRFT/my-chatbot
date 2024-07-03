@@ -6,7 +6,7 @@ import './UserReport.css';
 const UserReport = () => {
     const handleDownloadCSV = async () => {
         try {
-            const response = await axios.get('http://127.0.0.1:8000/generate-csv/', {
+            const response = await axios.get('http://15.207.192.151:8000/generate-csv/', {
                 responseType: 'blob' // important to handle binary data
             });
 

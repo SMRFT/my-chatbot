@@ -18,7 +18,7 @@ const UserForm = ({ onSubmit }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://127.0.0.1:8000/create/', formData);
+      const response = await axios.post('http://15.207.192.151:8000/create/', formData);
       console.log('User created:', response.data);
       onSubmit(response.data);
     } catch (error) {
