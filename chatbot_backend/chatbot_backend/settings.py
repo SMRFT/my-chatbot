@@ -28,7 +28,6 @@ DEBUG = True
 ALLOWED_HOSTS = ['15.207.192.151']
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000', 
-    '15.207.192.151'# Add your frontend URL here
 ]
 
 # Optional: Allow credentials (cookies, authorization headers, etc.) to be included in cross-origin requests
