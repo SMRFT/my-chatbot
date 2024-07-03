@@ -1,67 +1,71 @@
-.admin-chat {
+.admin-chat-container {
   display: flex;
   flex-direction: column;
-  padding: 10px;
-  background-color: #ffffff;
+  background-color: #FFFFFF;
   border-radius: 10px;
   border: 1px solid rgb(199, 198, 198);
   max-width: 400px;
   margin: 0 auto;
   font-family: Arial, sans-serif;
-  height: 600px; /* Fixed height for the chat container */
-  overflow-y: auto; /* Enable vertical scrolling */
-  position: relative; /* Position relative for absolute positioning of .admin-input */
+  height: 600px; /* Adjusted height for the chat container */
+  position: relative;
 }
 
-.admin-chat-heading{
-  background-color: cadetblue;
-  color: aliceblue;
-  border-radius: 5px;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.5rem;
-  }
-
 .admin-chat-messages {
-  flex: 1; /* Allow messages to expand within the container */
-  overflow-y: auto; /* Ensure messages scroll */
+  flex: 1;
+  overflow-y: auto;
+  padding: 10px;
+  margin-bottom: 60px; /* To accommodate the input box */
 }
 
 .admin-input {
-  position: absolute; /* Position absolute to fix at the bottom */
-  bottom: 0; /* Stick to the bottom */
-  left: 0; /* Align to the left */
-  width: 100%; /* Take full width of the parent */
-  padding: 10px;
-  background-color: #f1f1f1;
   display: flex;
   align-items: center;
+  padding: 10px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  box-sizing: border-box; /* Ensures padding is included in element's total width and height */
 }
 
-.input-container {
+.admin-input form {
   display: flex;
-  align-items: center;
   width: 100%;
-  max-width: 100%;
 }
 
 .admin-input input {
   flex: 1;
   padding: 10px;
   border: 1px solid #ccc;
-  border-radius: 5px;
-  margin-right: 5px;
+  border-radius: 5px 0 0 5px; /* Rounded corners for the left side */
+  margin-right: -1px; /* Remove the gap between input and button */
 }
 
 .admin-input button {
-  background-color: #007bff;
+  background-color: #007BFF;
   color: white;
-  border: none;
+  border: 1px solid #007BFF;
   padding: 10px;
-  border-radius: 5px;
+  border-radius: 0 5px 5px 0; /* Rounded corners for the right side */
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .admin-input button:hover {
-  background-color: #0056b3;
+  background-color: #0056B3;
 }
+
+.received-message {
+  align-self: flex-start !important;
+  clear: both;
+  white-space: nowrap;
+}
+
+.sent-message {
+  align-self: flex-end !important;
+  clear: both;
+  white-space: nowrap;
+}
+

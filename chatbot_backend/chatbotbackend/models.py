@@ -18,7 +18,7 @@ class User(models.Model):
     phone = models.CharField(max_length=15)
     email = models.EmailField(unique=True)
     address = models.TextField()
-
+    chatRemarks=models.CharField(max_length=15,blank=True,null=True)
     def save(self, *args, **kwargs):
         if not self.id:
             max_id = User.objects.aggregate(max_id=Max('id'))['max_id']
@@ -32,3 +32,15 @@ class User(models.Model):
 
     def __str__(self):
         return self.name
+
+class Message(models.Model):
+    SENDER_CHOICES = [
+        ('user', 'User'),
+        ('admin', 'Admin'),
+    ]
+    text = models.TextField()
+    sender = models.CharField(max_length=5, choices=SENDER_CHOICES)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"{self.sender}: {self.text}"

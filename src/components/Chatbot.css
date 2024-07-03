@@ -1,7 +1,20 @@
-.chatbot-container {
+.chatbot-wrapper {
   position: fixed;
   bottom: 10px;
   right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.chat-icon, .close-icon {
+  font-size: 3rem;
+  color: #007bff; /* Blue color to match the header */
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+
+.chatbot-container {
   width: 350px;
   height: 500px;
   background: white;
@@ -10,11 +23,49 @@
   display: flex;
   flex-direction: column;
   overflow-y: auto;
-  padding: 10px;
+}
+
+.chatbot-header {
+  background: #007bff; /* Blue color */
+  color: white;
+  padding: 5px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chatbot-header-content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.chatbot-header-title {
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.chatbot-header-title h2 {
+  margin-bottom: 0; /* Remove bottom margin */
+}
+
+.chatbot-header-title h5 {
+  margin-top: 0; /* Remove top margin */
+}
+
+.chatbot-icon {
+  width: 40px;
+  height: 40px;
+  margin-right: 20px;
 }
 
 .chatbot-messages {
   flex: 1;
+  padding: 10px;
+  overflow-y: auto;
 }
 
 .user-input {
@@ -80,6 +131,7 @@
 .message.admin p:hover {
   background-color: #ddd;
 }
+
 .option-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

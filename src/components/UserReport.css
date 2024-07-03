@@ -1,0 +1,7 @@
+.usereport {
+    display: flex;
+    margin-top: -23%;
+    justify-content: flex-start;
+    padding-left: 20px; /* Adjust this value as needed */
+    transform: translateY(-180px); /* Adjust this value to move the button up */
+}

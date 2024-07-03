@@ -2,6 +2,7 @@ import React from 'react';
 import './Message.css';
 
 const Message = ({ text, sender, isOption, handleOptionClick, optionType }) => {
+  console.log(`Rendering message: ${text} from ${sender}`);
   return (
     <div className={`message ${sender}`}>
       {isOption ? (
@@ -9,7 +10,7 @@ const Message = ({ text, sender, isOption, handleOptionClick, optionType }) => {
           {text}
         </button>
       ) : (
-        <span>{text}</span>
+        <p>{text}</p>
       )}
     </div>
   );
